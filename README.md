@@ -26,7 +26,7 @@ _You can reach me for questions or comments at mail.michaeldada@gmail.com_
 
 ## Technologies Used
 
-_C#, Nancy, Razor, Xunit_
+_C#, Nancy, Razor, xUnit_
 
 ### License
 
