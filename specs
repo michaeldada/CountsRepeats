@@ -1,0 +1,37 @@
+Count Repeats Specs
+
+
+behavior: checks two identical characters and returns true
+input: ("a", "a")
+output: true
+description: this is the simplest form of comparison
+
+behavior: checks two different characters and returns false
+input: ("a", "b")
+output: false
+description: this must be checked to ensure no false positives
+
+behavior: checks two identical words and returns true
+input: ("apple", "apple")
+output: true
+description: this is similar to our first test, but requires us to run through each word checking that all characters match
+
+behavior: checks two different words and returns true
+input: ("apple", "banana")
+output: false
+description: this must be checked to ensure no false positives
+
+behavior: checks a word against a paragraph that includes that word
+input: ("apple", "an apple a day keeps the doctor away")
+output: true
+description: this will tell us whether or not our word exists in the given string
+
+behavior: counts how many times a word repeats in a given string
+input: ("apple", "an apple a day keeps the doctor away")
+output: 1
+description: this is the same as the previous test but adds a counter to track how many times the word is used
+
+behavior: returns 0 if the word is never used in the given string
+input: ("apple", "a banana a day keeps the doctor away")
+output: 0
+description: this is must be checked to ensure we are only counting accurate matches
