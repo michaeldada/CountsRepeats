@@ -4,10 +4,11 @@ namespace CountRepeatsNS.Objects
 {
   public class CountRepeatsTest
   {
-    // [Fact]
-    // public void NumbersToWords_1_one()
-    // {
-    //   NumbersToWords test = new NumbersToWords(1);
-    //   Assert.Equal("one", test.Convert());
-    // }
+    [Fact]
+    public void CountRepeats_twoIdenticalCharacters_true()
+    {
+      CountRepeats test = new CountRepeats("a", "a");
+      Assert.Equal(true, test.RepeatCounter());
+    }
+  }
 }
