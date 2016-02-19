@@ -31,7 +31,7 @@ namespace CountRepeatsNS.Objects
     string[] phrase = GetPhrase().Split(' ');
     foreach(string word in phrase)
     {
-      if(word == GetWord())
+      if(word.ToLower() == GetWord().ToLower())
       {
         Counter++;
       }

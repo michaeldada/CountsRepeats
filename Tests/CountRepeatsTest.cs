@@ -46,5 +46,11 @@ namespace CountRepeatsNS.Objects
       CountRepeats test = new CountRepeats("cat", "I will walk my dog to the cathedral");
       Assert.Equal(0, test.RepeatCounter());
     }
+    [Fact]
+    public void CountRepeats_TestForCaseSensitivity_1()
+    {
+      CountRepeats test = new CountRepeats("hello", "Hello");
+      Assert.Equal(1, test.RepeatCounter());
+    }
   }
 }
