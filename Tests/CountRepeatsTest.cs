@@ -16,5 +16,11 @@ namespace CountRepeatsNS.Objects
       CountRepeats test = new CountRepeats("a", "b");
       Assert.Equal(false, test.RepeatCounter());
     }
+    [Fact]
+    public void CountRepeats_twoIdenticalWords_true()
+    {
+      CountRepeats test = new CountRepeats("apple", "apple");
+      Assert.Equal(true, test.RepeatCounter());
+    }
   }
 }
