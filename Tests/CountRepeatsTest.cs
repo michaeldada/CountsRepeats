@@ -5,34 +5,40 @@ namespace CountRepeatsNS.Objects
   public class CountRepeatsTest
   {
     [Fact]
-    public void CountRepeats_twoIdenticalCharacters_true()
+    public void CountRepeats_twoIdenticalCharacters_1()
     {
       CountRepeats test = new CountRepeats("a", "a");
-      Assert.Equal(true, test.RepeatCounter());
+      Assert.Equal(1, test.RepeatCounter());
     }
     [Fact]
-    public void CountRepeats_twoDifferentCharacters_false()
+    public void CountRepeats_twoDifferentCharacters_0()
     {
       CountRepeats test = new CountRepeats("a", "b");
-      Assert.Equal(false, test.RepeatCounter());
+      Assert.Equal(0, test.RepeatCounter());
     }
     [Fact]
-    public void CountRepeats_twoIdenticalWords_true()
+    public void CountRepeats_twoIdenticalWords_1()
     {
       CountRepeats test = new CountRepeats("apple", "apple");
-      Assert.Equal(true, test.RepeatCounter());
+      Assert.Equal(1, test.RepeatCounter());
     }
     [Fact]
-    public void CountRepeats_twoDifferentWords_false()
+    public void CountRepeats_twoDifferentWords_0()
     {
       CountRepeats test = new CountRepeats("apple", "banana");
-      Assert.Equal(false, test.RepeatCounter());
+      Assert.Equal(0, test.RepeatCounter());
     }
     [Fact]
-    public void CountRepeats_IsAWordInAGivenPhrase_true()
+    public void CountRepeats_IsAWordInAGivenPhrase_1()
     {
       CountRepeats test = new CountRepeats("apple", "an apple a day keeps the doctor away");
-      Assert.Equal(true, test.RepeatCounter());
+      Assert.Equal(1, test.RepeatCounter());
+    }
+    [Fact]
+    public void CountRepeats_OnlyWholeInstancesOfWords_1()
+    {
+      CountRepeats test = new CountRepeats("cat", "I will walk my cat to the cathedral");
+      Assert.Equal(1, test.RepeatCounter());
     }
   }
 }

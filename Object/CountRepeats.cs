@@ -25,16 +25,18 @@ namespace CountRepeatsNS.Objects
     return _phrase;
   }
 
-  public bool RepeatCounter()
+  public int RepeatCounter()
   {
-    if(GetPhrase().Contains(GetWord()))
+    int Counter = 0;
+    string[] phrase = GetPhrase().Split(' ');
+    foreach(string word in phrase)
     {
-      return true;
+      if(word == GetWord())
+      {
+        Counter++;
+      }
     }
-    else
-    {
-      return false;
-    }
+    return Counter;
   }
 
   }
