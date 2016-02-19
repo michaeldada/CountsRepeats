@@ -27,7 +27,7 @@ namespace CountRepeatsNS.Objects
 
   public bool RepeatCounter()
   {
-    if(GetWord() == GetPhrase())
+    if(GetPhrase().Contains(GetWord()))
     {
       return true;
     }
