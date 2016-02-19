@@ -14,11 +14,11 @@ namespace CountRepeatsNS.Objects
         return View["index.cshtml"];
       };
       Post["/output"] = _ => {
-        return "output";
-        // long outputlong = long.Parse(Request.Form["number"]);
-        // NumbersToWords newNumbersToWords = new NumbersToWords(outputlong);
-        // string output = newNumbersToWords.Convert();
-        // return View["output.cshtml", output];
+
+        CountRepeats test = new CountRepeats(Request.Form["word"], Request.Form["phrase"]);
+        int output = test.RepeatCounter();
+        
+        return View["output.cshtml", output];
       };
     }
   }

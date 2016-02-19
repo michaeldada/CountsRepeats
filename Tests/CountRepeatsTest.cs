@@ -40,5 +40,11 @@ namespace CountRepeatsNS.Objects
       CountRepeats test = new CountRepeats("cat", "I will walk my cat to the cathedral");
       Assert.Equal(1, test.RepeatCounter());
     }
+    [Fact]
+    public void CountRepeats_IfWordNeverExistsInPhrase_0()
+    {
+      CountRepeats test = new CountRepeats("cat", "I will walk my dog to the cathedral");
+      Assert.Equal(0, test.RepeatCounter());
+    }
   }
 }
