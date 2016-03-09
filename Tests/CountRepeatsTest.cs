@@ -35,6 +35,12 @@ namespace CountRepeatsNS.Objects
       Assert.Equal(1, test.RepeatCounter());
     }
     [Fact]
+    public void CountRepeats_MultipleInstancesOfAWordInAGivenPhrase_3()
+    {
+      CountRepeats test = new CountRepeats("apple", "Apple : an apple a day keeps the apple tree away");
+      Assert.Equal(3, test.RepeatCounter());
+    }
+    [Fact]
     public void CountRepeats_OnlyWholeInstancesOfWords_1()
     {
       CountRepeats test = new CountRepeats("cat", "I will walk my cat to the cathedral");
